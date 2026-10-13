@@ -1,0 +1,9 @@
+#node-search-category-sidebar.ytm-package-sidebar { overflow: hidden; }
+.ytm-package-filter { flex-shrink: 0; padding: 8px 12px 0; }
+.ytm-package-filter input { box-sizing: border-box; display: block; width: 100%; min-width: 0; height: 32px; padding: 5px 9px; border: 1px solid var(--border-color, #444); border-radius: 6px; background: var(--comfy-input-bg, #252525); color: var(--fg-color, #eee); font: inherit; font-size: 12px; outline: none; }
+.ytm-package-filter input::placeholder { color: var(--descrip-text, #999); }
+.ytm-package-filter input:focus { border-color: var(--p-primary-color, #5495e6); box-shadow: 0 0 0 1px var(--p-primary-color, #5495e6); }
+#node-search-category-sidebar.ytm-package-sidebar > [role=tree] { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
+#node-search-category-sidebar.ytm-package-sidebar > [role=tree] > [hidden] { display: none !important; }
+.ytm-package-empty { flex-shrink: 0; padding: 12px; color: var(--descrip-text, #999); font-size: 12px; text-align: center; }
+.ytm-package-empty[hidden] { display: none; }

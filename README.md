@@ -15,4 +15,6 @@
 
 管理范围是 `app.menu.element`、顶部扩展区域和原生侧边栏。插件自行创建的悬浮窗、画布节点内部按钮及弹窗内容不在管理范围内。
 
-验证：`npm test`。浏览器回归函数位于 `tests/toolbar-manager.browser.mjs`。
+新版双击节点选择器的左侧包列表提供独立搜索，按名称 A–Z 排列，忽略前缀 emoji 和符号，中文名称排在最后。搜索只过滤左侧包名；顶部节点搜索仍按原功能使用。此功能的前端扩展名为 `Yton.NodeSearchPackages`。
+
+验证：`npm test`。浏览器回归函数位于 `tests/toolbar-manager.browser.mjs` 和 `tests/node-search.browser.mjs`。
