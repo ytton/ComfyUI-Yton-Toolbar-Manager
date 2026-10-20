@@ -1,5 +1,6 @@
 import { app } from '../../scripts/app.js'
 import { collectEntries, applyEntries, allowedEntry } from './toolbar_catalog.js'
+import { repairWorkflowModels } from './model_repair_panel.js'
 
 const PREFIX = 'Yton.ToolbarManager'
 const IDS = { enabled: `${PREFIX}.Enabled`, blockNew: `${PREFIX}.BlockNew`, items: `${PREFIX}.Items` }
@@ -165,7 +166,13 @@ class ToolbarManager {
     const close = control('button', 'ytm-button', '关闭')
     close.type = 'button'
     close.addEventListener('click', () => this.dialog.close())
-    heading.append(title, close)
+    const actions = control('div', 'ytm-header-actions')
+    const repair = control('button', 'ytm-button', '智能填充缺失模型 / LoRA')
+    repair.type = 'button'
+    repair.title = '根据本地模型列表回填分类目录中的唯一同名文件'
+    repair.addEventListener('click', () => repairWorkflowModels(repair, this.status))
+    actions.append(repair, close)
+    heading.append(title, actions)
     const description = control('p', 'ytm-description', '取消勾选会强制隐藏入口，工作流节点继续可用。')
     const options = control('div', 'ytm-options')
     const option = (labelText, onChange) => {

@@ -6,6 +6,11 @@
 .ytm-dialog * { box-sizing: border-box; }
 .ytm-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .ytm-header h2 { margin: 0; font-size: 18px; }
+.ytm-header { flex-wrap: wrap; }
+.ytm-header-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ytm-model-list { display: grid; gap: 10px; min-height: 0; overflow: auto; font-size: 12px; }
+.ytm-model-row { display: grid; gap: 5px; padding: 10px; border: 1px solid var(--border-color, #555); border-radius: 8px; }
+.ytm-model-row span { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--descrip-text, #aaa); }
 .ytm-description { margin: 0; color: var(--descrip-text, #aaa); font-size: 12px; }
 .ytm-options { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 13px; }
 .ytm-options label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
